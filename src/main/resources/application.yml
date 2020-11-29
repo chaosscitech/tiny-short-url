@@ -7,6 +7,7 @@ spring:
 server:
   tomcat:
     accesslog: # 访问日志配置
-      directory: ${LOGS_DIR}
+      enabled: true
+      directory: ${LOGS_DIR:/tmp}
       # 默认为 common 即 '%h %l %u %t "%r" %s %b'
       pattern: '%h %l %u %t "%r" %s %b (%D ms)'
